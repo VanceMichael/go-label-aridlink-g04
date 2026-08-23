@@ -1,0 +1,6 @@
+.git
+.env
+bin
+coverage.out
+web/node_modules
+web/dist
