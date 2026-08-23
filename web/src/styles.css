@@ -1,0 +1,28 @@
+:root { color:#17312d; background:#f4f7f5; font-family:Inter,ui-sans-serif,system-ui,sans-serif; }
+* { box-sizing:border-box; }
+body { margin:0; min-width:320px; min-height:100vh; }
+.login-shell { min-height:100vh; display:grid; grid-template-columns:minmax(360px,520px) 1fr; }
+.login-panel { padding:clamp(32px,7vw,96px); display:flex; flex-direction:column; justify-content:center; background:#fff; }
+.brand-lockup { display:flex; align-items:center; gap:16px; margin-bottom:52px; }
+.brand-lockup h1,.brand-lockup h3 { margin:0!important; letter-spacing:0; }
+.brand-mark { width:48px; height:48px; display:grid; place-items:center; color:white; background:#167a66; font-weight:800; border-radius:6px; }
+.login-panel .ant-alert { margin-bottom:20px; }
+.login-context { padding:clamp(48px,9vw,132px); display:flex; flex-direction:column; justify-content:center; background:#173b36; color:#fff; }
+.login-context h2 { max-width:780px; font-size:clamp(34px,5vw,66px); line-height:1.08; letter-spacing:0; margin:12px 0 64px; }
+.eyebrow { color:#68b7a1; text-transform:uppercase; font-weight:700; font-size:12px; letter-spacing:0; }
+.login-context dl { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; border-top:1px solid #ffffff33; padding-top:28px; }
+.login-context dt { font-weight:700; margin-bottom:6px; }.login-context dd { margin:0;color:#c6d9d3; }
+.app-layout { min-height:100vh; }.sidebar { border-right:1px solid #dbe5e1; position:fixed!important; inset:0 auto 0 0; padding:24px 18px; }
+.brand-lockup.compact { margin-bottom:36px; }.brand-lockup.compact .brand-mark { width:36px;height:36px; }.sidebar nav { display:grid;gap:4px; }
+.sidebar nav a { color:#4d625e; padding:10px 12px; border-radius:5px; font-weight:600; }.sidebar nav a.active { background:#e5f1ed;color:#116353; }
+.account { position:absolute; bottom:22px; left:18px; right:18px; display:grid; gap:5px; padding-top:18px; border-top:1px solid #dbe5e1; }.account span { color:#6b7f7a;text-transform:capitalize;font-size:12px; }.account button { margin-top:10px; }
+.app-layout main,.app-layout .ant-layout-content { margin-left:248px; }.workspace { max-width:1420px; margin:0 auto; padding:36px 42px 72px; }
+.workspace-header { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:24px; }.workspace-header h2 { margin:3px 0 0!important; }
+.workspace-header .ant-input { width:280px; }.inline-error { margin:0 0 18px; padding:10px 12px; color:#9c2d2d;background:#fff0f0;border-left:3px solid #cf3f3f; }
+.loading { min-height:420px;display:grid;place-items:center; }.status-strip { display:grid;grid-template-columns:repeat(4,1fr);margin:24px 0;border-block:1px solid #dbe5e1;background:#fff; }
+.status-strip>div { min-height:146px;padding:22px;border-right:1px solid #dbe5e1;display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-content:start; }.status-strip>div:last-child { border-right:0; }
+.status-strip svg { color:#167a66;font-size:18px; }.status-strip span { color:#687c77;font-weight:600; }.status-strip strong { grid-column:1/-1;font-size:28px;margin-top:18px; }.status-strip small { grid-column:1/-1;color:#7c8d89;margin-top:5px;line-height:1.4; }
+.program-band { display:grid;grid-template-columns:330px minmax(500px,1fr);gap:52px;align-items:center;padding:34px 0; }.program-band>div:first-child { text-align:center; }.program-band h3 { text-align:left; }
+.state-board { padding:32px 0; }.state-cell { width:190px;min-height:104px;padding:18px;background:#fff;border:1px solid #dbe5e1;border-radius:6px;display:grid; }.state-cell span { color:#60736f;text-transform:capitalize; }.state-cell strong { font-size:30px; }
+@media (max-width:900px) { .login-shell{grid-template-columns:1fr}.login-context{min-height:42vh}.login-context dl{grid-template-columns:1fr}.sidebar{display:none}.app-layout main,.app-layout .ant-layout-content{margin-left:0}.workspace{padding:24px 18px}.workspace-header{align-items:stretch;flex-direction:column}.workspace-header .ant-input{width:100%}.status-strip{grid-template-columns:1fr 1fr}.program-band{grid-template-columns:1fr}.status-strip>div:nth-child(2){border-right:0} }
+@media (max-width:520px) { .status-strip{grid-template-columns:1fr}.status-strip>div{border-right:0;border-bottom:1px solid #dbe5e1}.login-panel{padding:28px 22px}.login-context{padding:38px 22px}.login-context h2{font-size:34px}.workspace{padding-inline:12px} }
