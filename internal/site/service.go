@@ -84,8 +84,10 @@ func (s *Service) Create(ctx context.Context, input CreateInput) (Site, error) {
 		if !partner {
 			return platform.ErrForbidden
 		}
-		_, err := tx.Exec(ctx, `INSERT INTO sites(id,program_id,organization_id,name,country_code,area_hectares,ecosystem,status,version,created_at,updated_at)
-			VALUES($1,$2,$3,$4,$5,$6,$7,'proposed',1,$8,$8)`, created.ID, created.ProgramID, created.OrganizationID,
+		insertDB := s.store.DB()
+		insertSQL := `INSERT INTO sites(id,program_id,organization_id,name,country_code,area_hectares,ecosystem,status,version,created_at,updated_at)
+			VALUES($1,$2,$3,$4,$5,$6,$7,'proposed',1,$8,$8)`
+		_, err := insertDB.Exec(ctx, insertSQL, created.ID, created.ProgramID, created.OrganizationID,
 			created.Name, created.CountryCode, created.AreaHectares, created.Ecosystem, now)
 		if err != nil {
 			return store.Translate(err)
